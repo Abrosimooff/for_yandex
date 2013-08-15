@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">-->
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+    <title>Пьяница - Карточная игра</title>
+
+</head>
+<body>
+<header id="controls">
+    <span>Наблюдать за игрой?</span>
+    <input type="checkbox" id="viewer" checked="checked">
+<span>Выберите количестов игроков</span>
+<button class="mini-button" onclick="set_count_player(2)"> 2 Игрока</button>
+<button class="mini-button" onclick="set_count_player(4)"> 4 Игрока</button>
+</header>
+<section id="pole_play">
+</section>
+<section id="play">
+</section>
+<a href="#" onclick="location.reload()" id="reload">Заново</a>
+
+</body>
+</html>
