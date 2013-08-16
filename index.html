@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" href="css/st.css">
+    <title></title>
+</head>
+<body>
+<a target="_blank" href="http://www.yandex.ru/" id="yandex"></a>
+<div id="background"></div>
+
+<div id="progress-bar">Шаг 1</div>
+<form method="POST">
+<section  id="personal">
+    <nav>
+        <a href="#" class="personal-btn active">1</a>
+        <a next='right' step="1" href="#" class="opt-btn">2</a>
+        <a next='right' step="2" href="#" class="test-btn">3</a>
+        <a next='right' step="3"href="#" class="finish-btn">4</a>
+    </nav>
+    <fieldset>
+        <div>
+        <label for="year_birth">Год рождения.</label>
+            <input id="year_birth" name="year_birth" type="number" autofocus  min="1951"  max="2000">
+        </div>
+
+        <div>
+            <label for="city">Город, в котором вы живёте.</label>
+            <input id="city" name="city" type="text">
+        </div>
+
+        <div>
+            <label for="education">Вуз, факультет, специальность, кафедра.</label>
+            <textarea id="education" name="education"></textarea>
+        </div>
+
+        <div>
+            <label for="education_year">Год окончания вуза.</label>
+            <input id="education_year" name="education_year" type="number" min="1981"  max="2015">
+        </div>
+
+        <div>
+            <label >Уровень владения английским языком:</label>
+            <input id="lang1" type="radio" name="lang" value="lang1"><label for="lang1">начальный</label>
+            <input id="lang2" type="radio" name="lang" value="lang2"><label for="lang2">средний</label>
+            <input id="lang3" type="radio" name="lang" value="lang3"><label for="lang3">свободное владение</label>
+        </div>
+
+        <div>
+            <label for="school_for_you">Чего вы ожидаете от участия в Школе?</label>
+           <textarea id="school_for_you" name="school_for_you"></textarea>
+        </div>
+
+        <div>
+            <label for="learned_text">Откуда вы о нас узнали?</label>
+           <textarea id="learned_text" name="learned_text"></textarea>
+        </div>
+
+        <div>
+            <label for="time_for_yandex">Сколько времени вы были бы готовы уделять стажировке или работе в Яндексе?</label>
+            <textarea id="time_for_yandex" name="time_for_yandex"></textarea>
+        </div>
+
+    </fieldset>
+    <a href="#" class="next" to_step="2">Следующий шаг</a>
+
+</section>
+<section id="opt" >
+    <nav >
+    <a next='left' step="1" href="#" class="personal-btn">1</a>
+    <a href="#" class="opt-btn active">2</a>
+    <a next='right' step="1" href="#" class="test-btn">3</a>
+    <a next='right' step="2" href="#" class="finish-btn">4</a>
+    </nav>
+    <fieldset>
+        <div>
+            <label for="opt_text">Расскажите о вашем опыте разработки. Нам будет интересно всё — как серьезный интерфейс, так и просто домашняя страничка.</label>
+            <textarea id="opt_text" name="opt"></textarea>
+        </div>
+
+        <div>
+            <label for="opt_work">Если вы где-нибудь работали, расскажите, какие у вас были должностные обязанности и был ли опыт работы в команде.</label>
+            <textarea id="opt_work" name="opt_work"></textarea>
+        </div>
+
+        <div>
+            <label for="ppp"> Перечислите, какими программными продуктами вы пользуетесь в своей работе — от редактора до специализированных утилит
+                (Intellij Idea, Node.js, Uglify.js, GNU Make). Для каждого инструмента укажите, какие задачи вы с помощью него решаете и почему выбрали именно его.</label>
+            <textarea id="ppp" name="ppp"></textarea>
+        </div>
+
+        <div>
+            <label for="cmd">Пользуетесь ли вы командной строкой? Какими командами вы пользуетесь и какие задачи вы решаете с их помощью?
+                С какими программами вы преимущественно или полностью взаимодействуете через интерфейс командной строки?.</label>
+            <textarea id="cmd" name="cmd"></textarea>
+        </div>
+
+    </fieldset>
+    <a href="#" class="next" to_step="3">Следующий шаг</a>
+</section>
+<section  id="test">
+    <nav>
+        <a next='left' step="2" href="#" class="personal-btn">1</a>
+        <a next='left' step="1" href="#" class="opt-btn ">2</a>
+        <a href="#" class="test-btn active">3</a>
+        <a next='right' step="1" href="#" class="finish-btn">4</a>
+    </nav>
+    <fieldset>
+        <div>
+            <label for="test1"><p>Напишите на JavaScript функцию, которая выводит список всех чисел, которые равны сумме факториалов своих цифр. Пример такого числа:
+                4! + 0! + 5! + 8! + 5! = 40585
+                </p>
+                <p>В качестве ответа на вопрос пришлите ссылку на <a target="_blank" href="http://jsfiddle.net/">http://jsfiddle.net/</a> с вашим кодом или на ваш репозиторий на <a href="https://github.com/" target="_blank">https://github.com/</a>.</p>
+            </p></label>
+            <textarea id="test1" name="test1"></textarea>
+        </div>
+
+        <div>
+            <label for="test2"><p>Вы — пилот грузового межгалактического корабля. Ваша работа — перевозка грузов с одной планету на другую.
+                Грузоподъемность вашего корабля ограничена, поэтому за один рейс вы можете перевезти не более N кг полезного груза.
+                Ваш корабль умеет сообщать свое состояние (местоположение и степень загруженности), а также летать в любую точку пространства.
+                Каждая планета может содержать на себе груз, который можно взять. Также на каждой планете груз можно оставить.</p>
+                <b>Задание</b>
+                <p>
+                Даны незавершенные интерфейсы корабля и планеты. Напишите недостающий код.
+                Полное условие задачи доступно на  <a href="https://github.com/yandex-shri/introtask-space" target="_blank">https://github.com/yandex-shri/introtask-space.</a>
+                В качестве ответа на вопрос пришлите ссылку на <a href="http://jsfiddle.net/" target="_blank">http://jsfiddle.net/</a> с вашим кодом или на ваш репозиторий на <a href="https://github.com/" target="_blank">https://github.com/</a>.
+            </p></label>
+            <textarea id="test2" name="test2"></textarea>
+        </div>
+
+        <div>
+            <label for="test3"><p>Сверстайте форму-анкету с нашими заданиями для кандидатов. Страница должна работать в следующих браузерах: <mark>MSIE (8, 9, 10)</mark>, <mark>Google Chrome (26, 27)</mark>, <mark>Firefox (20, 21)</mark>, <mark>Opera (12.15, 12.14)</mark>, <mark>Яндекс.Браузер 1.5.</mark> По возможности используйте приёмы безопасной деградации CSS. Страница должна содержать интерактив, реализованный с помощью JS и jQuery. Это может быть:</p>
+                <ol>
+                    <li>проверка полноты и правильности заполнения полей (где это возможно);</li>
+                    <li>возможность свернуть и развернуть разделы (аккордеон);</li>
+                    <li>индикатор заполнения анкеты; что-нибудь ещё.</li>
+                </ol>
+                <p>Подумайте над тем, как эти данные будут отправляться на сервер.
+                Будет плюсом, если вы сверстаете страницу, используя БЭМ.</p>
+                <b>Дополнительные задания</b>
+                <ol>
+                    <li>Выполните задание про форму-анкету, используя один из классических шаблонизаторов: Handlebars, mustache, Dust, Jade и т.п.</li>
+                    <li>Выполните задание про форму-анкету, используя один из экзотических шаблонизаторов: XSLT, YATE, BEMHTML и т.п.</li>
+                </ol>
+                <p> Разработку необходимо вести на <a href="https://github.com/" target="_blank">https://github.com/</a>. В качестве ответа на вопрос пришлите ссылку на проект.</p>
+            </p></label>
+            <textarea id="test3" name="test3"></textarea>
+        </div>
+
+    </fieldset>
+    <a href="#" class="next" to_step="4">Последний шаг</a>
+</section>
+<section id="finish" >
+    <nav>
+        <a next='left' step="3" href="#" class="personal-btn ">1</a>
+        <a next='left' step="2" href="#" class="opt-btn ">2</a>
+        <a next='left' step="1" href="#" class="test-btn">3</a>
+        <a href="#" class="finish-btn active">4</a>
+    </nav>
+    <fieldset>
+        <div>
+            <label for="rezume">Резюме до 250 КБ</label>
+            <input id="rezume" name="rezume" type="file">
+        </div>
+        <div>
+            <label for="my_round">Ссылка на профиль в Моем Круге</label>
+            <input id="my_round" name="my_round" type="url">
+        </div>
+        <div>
+            <label for="name">Имя, Фамилия</label>
+            <input id="name" name="name" type="text">
+        </div>
+        <div>
+            <label for="phone">Телефон</label>
+            <input id="phone" name="phone" type="text">
+            <a href="#">Пожалуйста, укажите код города</a>
+        </div>
+        <div>
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email">
+        </div>
+
+        <div>
+            <label for="other">Дополительные сведения</label>
+            <textarea id="other" name="other"></textarea>
+        </div>
+        <div>
+            <label>Откуда вы узнали о нашем предложении?</label>
+            <br>
+            <a id="select_laerned" name="leadned"  href="#">Выбрать</a>
+            <ul style="display: none">
+                <a href="#"><li value="1">От HR-менеджера Яндекс</li></a>
+                <a href="#"><li value="2">Я. Субботник</li></a>
+                <a href="#"><li value="3">Yet another Conference</li></a>
+                <a href="#"><li value="4">На другой конференциии</li></a>
+                <a href="#"><li value="5">Из поиска</li></a>
+                <a href="#"><li value="6">По рекомендации</li></a>
+                <a href="#"><li value="7">Другое</li></a>
+            </ul>
+            <textarea id="other_learned" title="Напишите откуда узнали о предложении" style="display: none"></textarea>
+        </div>
+       <div>
+        <input id="agreement" name="agreement" type="checkbox">
+           <label for="agreement">Я даю свое согласие на передачу в ООО «ЯНДЕКС» резюме и/или анкеты, содержащих мои персональные данные, и согласен с тем, что они будут храниться в ООО «ЯНДЕКС» в течение 5 лет и будут обрабатываться исключительно для целей предложения мне вакансий группы компаний «ЯНДЕКС», в соответствии с Федеральным законом «О персональных данных».</label>
+        <div>
+        <a to_step="5" href="#" id="submit">Отправить</a>
+        <a href="#" id="clear" class="button">Очистить</a>
+        </div>
+       </div>
+    </fieldset>
+
+</section>
+</form>
+<section  id="good-work">
+    <h1>Анкета успешно отправлена!</h1>
+</section>
+</body>
+</html>
