@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/st.css">
     <title></title>
 </head>
 <body>
+<a target="_blank" href="http://www.yandex.ru/" id="yandex"></a>
 <div id="background"></div>
+
 <div id="progress-bar">Шаг 1</div>
 <form method="POST">
 <section  id="personal">
@@ -22,29 +22,23 @@
     </nav>
     <fieldset>
         <div>
-        <label>Год рождения.</label>
-            <input name="year_birth" type="number" autofocus  min="1951"  max="2000">
+        <label for="year_birth">Год рождения.</label>
+            <input id="year_birth" name="year_birth" type="number" autofocus  min="1951"  max="2000">
         </div>
 
         <div>
-            <label>Город, в котором вы живёте.</label>
-            <input name="city" type="text" data-provide="typeahead" data-items="4" data-source='["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
-"Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas",
-"Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota",
-"Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey",
-"New Mexico","New York","North Dakota","North Carolina","Ohio","Oklahoma","Oregon",
-"Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas",
-"Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]'>
+            <label for="city">Город, в котором вы живёте.</label>
+            <input id="city" name="city" type="text">
         </div>
 
         <div>
-            <label>Вуз, факультет, специальность, кафедра.</label>
-            <textarea name="education"></textarea>
+            <label for="education">Вуз, факультет, специальность, кафедра.</label>
+            <textarea id="education" name="education"></textarea>
         </div>
 
         <div>
-            <label>Год окончания вуза.</label>
-            <input name="education_year" type="number" min="1981"  max="2015">
+            <label for="education_year">Год окончания вуза.</label>
+            <input id="education_year" name="education_year" type="number" min="1981"  max="2015">
         </div>
 
         <div>
@@ -55,18 +49,18 @@
         </div>
 
         <div>
-            <label>Чего вы ожидаете от участия в Школе?</label>
-           <textarea name="school_for_you"></textarea>
+            <label for="school_for_you">Чего вы ожидаете от участия в Школе?</label>
+           <textarea id="school_for_you" name="school_for_you"></textarea>
         </div>
 
         <div>
-            <label>Откуда вы о нас узнали?</label>
-           <textarea name="learned_text"></textarea>
+            <label for="learned_text">Откуда вы о нас узнали?</label>
+           <textarea id="learned_text" name="learned_text"></textarea>
         </div>
 
         <div>
-            <label>Сколько времени вы были бы готовы уделять стажировке или работе в Яндексе?</label>
-            <textarea name="time_for_yandex"></textarea>
+            <label for="time_for_yandex">Сколько времени вы были бы готовы уделять стажировке или работе в Яндексе?</label>
+            <textarea id="time_for_yandex" name="time_for_yandex"></textarea>
         </div>
 
     </fieldset>
@@ -82,25 +76,25 @@
     </nav>
     <fieldset>
         <div>
-            <label>Расскажите о вашем опыте разработки. Нам будет интересно всё — как серьезный интерфейс, так и просто домашняя страничка.</label>
-            <textarea name="opt"></textarea>
+            <label for="opt_text">Расскажите о вашем опыте разработки. Нам будет интересно всё — как серьезный интерфейс, так и просто домашняя страничка.</label>
+            <textarea id="opt_text" name="opt"></textarea>
         </div>
 
         <div>
-            <label>Если вы где-нибудь работали, расскажите, какие у вас были должностные обязанности и был ли опыт работы в команде.</label>
-            <textarea name="opt_work"></textarea>
+            <label for="opt_work">Если вы где-нибудь работали, расскажите, какие у вас были должностные обязанности и был ли опыт работы в команде.</label>
+            <textarea id="opt_work" name="opt_work"></textarea>
         </div>
 
         <div>
-            <label> Перечислите, какими программными продуктами вы пользуетесь в своей работе — от редактора до специализированных утилит
+            <label for="ppp"> Перечислите, какими программными продуктами вы пользуетесь в своей работе — от редактора до специализированных утилит
                 (Intellij Idea, Node.js, Uglify.js, GNU Make). Для каждого инструмента укажите, какие задачи вы с помощью него решаете и почему выбрали именно его.</label>
-            <textarea name="ppp"></textarea>
+            <textarea id="ppp" name="ppp"></textarea>
         </div>
 
         <div>
-            <label>Пользуетесь ли вы командной строкой? Какими командами вы пользуетесь и какие задачи вы решаете с их помощью?
+            <label for="cmd">Пользуетесь ли вы командной строкой? Какими командами вы пользуетесь и какие задачи вы решаете с их помощью?
                 С какими программами вы преимущественно или полностью взаимодействуете через интерфейс командной строки?.</label>
-            <textarea name="cmd"></textarea>
+            <textarea id="cmd" name="cmd"></textarea>
         </div>
 
     </fieldset>
@@ -115,16 +109,16 @@
     </nav>
     <fieldset>
         <div>
-            <label><p>Напишите на JavaScript функцию, которая выводит список всех чисел, которые равны сумме факториалов своих цифр. Пример такого числа:
+            <label for="test1"><p>Напишите на JavaScript функцию, которая выводит список всех чисел, которые равны сумме факториалов своих цифр. Пример такого числа:
                 4! + 0! + 5! + 8! + 5! = 40585
                 </p>
                 <p>В качестве ответа на вопрос пришлите ссылку на <a target="_blank" href="http://jsfiddle.net/">http://jsfiddle.net/</a> с вашим кодом или на ваш репозиторий на <a href="https://github.com/" target="_blank">https://github.com/</a>.</p>
             </p></label>
-            <textarea name="test1"></textarea>
+            <textarea id="test1" name="test1"></textarea>
         </div>
 
         <div>
-            <label><p>Вы — пилот грузового межгалактического корабля. Ваша работа — перевозка грузов с одной планету на другую.
+            <label for="test2"><p>Вы — пилот грузового межгалактического корабля. Ваша работа — перевозка грузов с одной планету на другую.
                 Грузоподъемность вашего корабля ограничена, поэтому за один рейс вы можете перевезти не более N кг полезного груза.
                 Ваш корабль умеет сообщать свое состояние (местоположение и степень загруженности), а также летать в любую точку пространства.
                 Каждая планета может содержать на себе груз, который можно взять. Также на каждой планете груз можно оставить.</p>
@@ -134,11 +128,11 @@
                 Полное условие задачи доступно на  <a href="https://github.com/yandex-shri/introtask-space" target="_blank">https://github.com/yandex-shri/introtask-space.</a>
                 В качестве ответа на вопрос пришлите ссылку на <a href="http://jsfiddle.net/" target="_blank">http://jsfiddle.net/</a> с вашим кодом или на ваш репозиторий на <a href="https://github.com/" target="_blank">https://github.com/</a>.
             </p></label>
-            <textarea name="test2"></textarea>
+            <textarea id="test2" name="test2"></textarea>
         </div>
 
         <div>
-            <label><p>Сверстайте форму-анкету с нашими заданиями для кандидатов. Страница должна работать в следующих браузерах: <mark>MSIE (8, 9, 10)</mark>, <mark>Google Chrome (26, 27)</mark>, <mark>Firefox (20, 21)</mark>, <mark>Opera (12.15, 12.14)</mark>, <mark>Яндекс.Браузер 1.5.</mark> По возможности используйте приёмы безопасной деградации CSS. Страница должна содержать интерактив, реализованный с помощью JS и jQuery. Это может быть:</p>
+            <label for="test3"><p>Сверстайте форму-анкету с нашими заданиями для кандидатов. Страница должна работать в следующих браузерах: <mark>MSIE (8, 9, 10)</mark>, <mark>Google Chrome (26, 27)</mark>, <mark>Firefox (20, 21)</mark>, <mark>Opera (12.15, 12.14)</mark>, <mark>Яндекс.Браузер 1.5.</mark> По возможности используйте приёмы безопасной деградации CSS. Страница должна содержать интерактив, реализованный с помощью JS и jQuery. Это может быть:</p>
                 <ol>
                     <li>проверка полноты и правильности заполнения полей (где это возможно);</li>
                     <li>возможность свернуть и развернуть разделы (аккордеон);</li>
@@ -153,7 +147,7 @@
                 </ol>
                 <p> Разработку необходимо вести на <a href="https://github.com/" target="_blank">https://github.com/</a>. В качестве ответа на вопрос пришлите ссылку на проект.</p>
             </p></label>
-            <textarea name="test3"></textarea>
+            <textarea id="test3" name="test3"></textarea>
         </div>
 
     </fieldset>
@@ -168,30 +162,30 @@
     </nav>
     <fieldset>
         <div>
-            <label>Резюме до 250 КБ</label>
-            <input name="rezume" type="file">
+            <label for="rezume">Резюме до 250 КБ</label>
+            <input id="rezume" name="rezume" type="file">
         </div>
         <div>
-            <label>Ссылка на профиль в Моем Круге</label>
-            <input name="my_round" type="url">
+            <label for="my_round">Ссылка на профиль в Моем Круге</label>
+            <input id="my_round" name="my_round" type="url">
         </div>
         <div>
-            <label>Имя, Фамилия</label>
-            <input name="name" type="text">
+            <label for="name">Имя, Фамилия</label>
+            <input id="name" name="name" type="text">
         </div>
         <div>
-            <label>Телефон</label>
-            <input name="phone" type="text">
+            <label for="phone">Телефон</label>
+            <input id="phone" name="phone" type="text">
             <a href="#">Пожалуйста, укажите код города</a>
         </div>
         <div>
-            <label>E-mail</label>
-            <input type="email">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email">
         </div>
 
         <div>
-            <label>Дополительные сведения</label>
-            <textarea name="other"></textarea>
+            <label for="other">Дополительные сведения</label>
+            <textarea id="other" name="other"></textarea>
         </div>
         <div>
             <label>Откуда вы узнали о нашем предложении?</label>

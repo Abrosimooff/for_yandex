@@ -2,7 +2,6 @@ body{
     padding:0px;
     margin: 0px;
     overflow: hidden;
-    background: url("../ya.png") top center no-repeat;
 
 
 }
@@ -15,11 +14,39 @@ body{
     background: url("../ya.jpg") top right repeat;
     opacity: 0.3;
 }
+
+#yandex{
+
+    position: fixed;
+    top:-135px;
+    left: 45%;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 0px;
+    -webkit-box-shadow: 0px 1px 3px #333;
+       -moz-box-shadow: 0px 1px 3px #333;
+            box-shadow: 0px 1px 3px #333;
+    -webkit-transition: -webkit-transform 0.5s, -webkit-box-shadow 1s;
+       -moz-transition:    -moz-transform 0.5s,    -moz-box-shadow 1s;
+            transition:         transform 0.5s,         box-shadow 1s;
+    z-index: 1;
+    background:url("../ya.png") no-repeat rgba(255, 255, 255, 0.65) 50px 140px;
+}
+#yandex:hover{
+    -webkit-transform: rotate(3deg);
+       -moz-transform: rotate(3deg);
+            transform: rotate(3deg);
+    -webkit-box-shadow: 1px 1px 10px #333;
+       -moz-box-shadow: 1px 1px 10px #333;
+            box-shadow: 1px 1px 10px #333;
+
+}
 #progress-bar{
     display: block;
     overflow: hidden;
     position: fixed;
-    top: 40px;
+    top: 70px;
     left: 0px;
     height: 15%;
     background-color: rgba(86, 135, 177, 0.80);
@@ -134,16 +161,26 @@ input[type="text"],input[type="tel"],input[type="email"], input[type="url"],inpu
     font-size: 14px;
     font-weight: bold;
     padding: 5px;
+    background-color: rgba(255, 255, 255, 0.80);
 
     -webkit-box-shadow: 0px 1px 2px #222;
        -moz-box-shadow: 0px 1px 2px #222;
             box-shadow: 0px 1px 2px #222;
+    -webkit-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    transition: background 0.5s;
 }
-input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus, input[type="email"]:focus, input[type="number"]:focus  {
+input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus, input[type="email"]:focus, input[type="number"]:focus, textarea:focus  {
     -webkit-box-shadow: 0px 1px 10px #e8792e;
        -moz-box-shadow: 0px 1px 10px #e8792e;
             box-shadow: 0px 1px 10px #e8792e;
+    background-color: #fff;
 }
+
+input[type="text"]:hover, input[type="tel"]:hover, input[type="email"]:hover, input[type="email"]:hover, input[type="number"]:hover, textarea:hover{
+    background-color: #fff;
+}
+
 fieldset div{
     display: block;
     margin-bottom: 20px;
@@ -226,6 +263,7 @@ li{
     font-style: italic;
     background-color: rgba(221, 59, 21, 0.70);
     padding: 5px;
+    margin-left: 5px;
     border-radius: 3px;
 
 }
@@ -234,23 +272,24 @@ li{
     height: auto;
     position: fixed;
     top: 10px;
-    right: -200px;
+    right: 10px;
     padding: 5px;
     color: #fff;
     font-weight: bold;
     font-size: 14px;
-    opacity: 0.2;
+    opacity: 0;
 }
 #error-submit a{
     display: block;
-    background-color: rgba(221, 59, 21, 0.80);
+    background-color: rgba(221, 59, 21, 0.90);
     color: #fff;
-    border: 0px solid rgba(221, 59, 21, 0.80);
+    border: 0px;
     padding: 3px;
     margin-bottom: 2px;
     -webkit-box-shadow: 1px 1px 1px #444;
        -moz-box-shadow: 1px 1px 1px #444;
             box-shadow: 1px 1px 1px #444;
+    text-shadow: 1px 1px 2px #333;
 
 
 }

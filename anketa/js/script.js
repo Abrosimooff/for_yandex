@@ -34,6 +34,33 @@ $(document).ready( function(){
                 }
 
             }
+
+            if ($(this).attr('name') == 'city'){
+                var value =$(this).val()
+                if (value.length > 0) {
+                    var error = false
+                    for ( var i = 0; i < $(this).val().length; i++){
+                        for (var iter = 0; iter<Not_char.length; iter++){
+
+                            if ( value.charAt(i) == Not_char[iter] ){
+                                error = true
+                                break
+                            }
+                        }
+
+                    }
+                    if (error){
+                        $(this).next('span').remove()
+                        $(this).removeClass('good').after('<span class="error">Недопустимое значение</span>')
+                    }
+                    else {
+                        $(this).next('span').remove()
+                        $(this).addClass('good')
+                    }
+                }
+
+            }
+
             if ($(this).attr('name') == 'education_year'){
 
                 if ($(this).val().length > 0) {   // Если введено точно число
@@ -258,9 +285,8 @@ $(document).ready( function(){
                     $('#error-submit').remove()
                     $('body').append('<div id="error-submit"><span>Данные не отправлены :(</span></div>')
                     $('#error-submit').animate({
-                        right: '10px',
                         opacity: 1
-                    }, 400 );
+                    }, 1000 );
                 }
             })
 
@@ -274,9 +300,6 @@ $(document).ready( function(){
 
 
     })
-
-
-
 
 
     $('#clear').click(function(){
