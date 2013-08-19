@@ -72,7 +72,7 @@ span{
 .player_panel{
     text-align: center;
     background-color: #fff;
-    border-radius: 100%;
+    border-radius: 10px 10px 0px 0px;
     color: #333;
     margin: 10px 10px 0px 10px;
     display: inline-block;
@@ -92,7 +92,7 @@ span{
 }
 .player_panel span{
     background-color: #d8611f;
-    display: block;
+    border-radius: 10px 10px 0px 0px;
     padding-top: 30px;
     color: #fff;
     text-align: center;
@@ -108,7 +108,7 @@ span{
 }
 .percent{
     background-color: #1eab45;
-    padding-top: 5px;
+    padding-top: 10px;
     height: 100%;
     font-size: 16px;
     color: #fff;
@@ -121,26 +121,29 @@ span{
     border: none;
 }
 #reload{
+    background: url("reload") #009f3c left center  no-repeat;
+    background-size: 100px 100px ;
     display: block;
-    width: 200px;
-    height: 180px;
-    background-color: #333;
-    color: #333;
+    width: 150px;
+    height: 250px;
     position: fixed;
-    top: 0px;
-    right: -100px;
+    top: -95px;
+    right: -50px;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+            transform: rotate(-45deg);
 
-    font-size: 20px;
     text-decoration: none;
-    box-shadow: 0px 2px 2px #747474;
-    transition: right 0.1s,width 0.1s, height 1s;
-    -moz-transition:right 0.1s,width 0.1s, height 1s;
-    -webkit-transition:right 0.1s,width 0.1s, height 1s;
+    -webkit-box-shadow: -2px 0px 5px #202020;
+       -moz-box-shadow: -2px 0px 5px #202020;
+            box-shadow: -2px 0px 5px #202020;
+    transition: width 0.3s, box-shadow 0.3s;
+    -moz-transition: width 0.3s, -moz-box-shadow 0.3s;
+    -webkit-transition: width 0.3s, -webkit-box-shadow 0.3s;
 }
 #reload:hover{
-   right: 0px;
-    width: 100%;
-    font-size: 50px;
-    text-align: center;
-    color: #fff;
+    width: 160px;
+    -webkit-box-shadow: -4px 0px 5px #202020;
+       -moz-box-shadow: -4px 0px 5px #202020;
+            box-shadow: -4px 0px 5px #202020;
 }

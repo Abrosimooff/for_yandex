@@ -83,7 +83,6 @@ function set_count_player(count){
     {
         $('#controls span:first, #viewer').hide();
         $('#controls').css('height', '50px')
-        $('#reload').css('height', '50px')
         $('.mini-button').hide();
         game_start()
     }
@@ -91,7 +90,6 @@ function set_count_player(count){
     {
         $('#controls span:first, #viewer').hide();
         $('#controls').css('height', '80px')
-        $('#reload').css('height', '80px')
     }
 
     $('.mini-button').remove();
@@ -129,7 +127,7 @@ function exit (player)
 {   $('#controls').empty()
     $('#controls').append('<span>Поздравляем! Победу одержал Игрок '+player+'</span>')
     $('#controls').css('height','100%')
-    $('#reload').css('height','100%')
+
 }
 //////////////////////////////////////// ВЕС КАРТ /////////////////////////////
 function get_Arr_weight(Arr)
